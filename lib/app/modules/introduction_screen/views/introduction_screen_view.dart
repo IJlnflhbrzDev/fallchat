@@ -53,7 +53,7 @@ class IntroductionScreenView extends GetView<IntroductionScreenController> {
               image: Container(
                 width: Get.width * .9,
                 height: Get.height * .9,
-                child: Lottie.asset('assets/payment.json'),
+                child: Lottie.asset('assets/login.json'),
               ),
             ),
           ],
