@@ -37,13 +37,17 @@ class MyApp extends StatelessWidget {
             future: Future.delayed(Duration(seconds: 3)),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                return GetMaterialApp(
-                  title: "Application",
-                  // Noted : add kondisi ketika mau di skip introduction screen nya
-                  initialRoute: authC.isSkipIntroDuctionScreen.isTrue
-                      ? Routes.LOGIN
-                      : Routes.HOME,
-                  getPages: AppPages.routes,
+                return Obx(
+                  () => GetMaterialApp(
+                    title: "Application",
+                    // Noted : add kondisi ketika mau di skip introduction screen nya
+                    initialRoute: authC.isSkipIntroDuctionScreen.isTrue
+                        ? authC.isSkipAuth.isTrue
+                            ? Routes.HOME
+                            : Routes.LOGIN
+                        : Routes.HOME,
+                    getPages: AppPages.routes,
+                  ),
                 );
               }
               return SplashScreen();
