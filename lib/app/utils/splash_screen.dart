@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -10,9 +11,8 @@ class SplashScreen extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Container(
-            color: Color(0xffFFBF5E),
-            width: 300,
-            height: 300,
+            width: Get.width * .8,
+            height: Get.height,
             child: Lottie.asset('assets/splash-1.json'),
           ),
         ),
