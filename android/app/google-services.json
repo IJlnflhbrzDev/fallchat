@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "671779952898",
+    "project_id": "fallchat-app",
+    "storage_bucket": "fallchat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671779952898:android:bcac30577e8d4010b7ca1b",
+        "android_client_info": {
+          "package_name": "com.FallDevAcademy.fallchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671779952898-aecso83u7qgn330rbkv0uqfm913v3tjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.FallDevAcademy.fallchat",
+            "certificate_hash": "7bd9f9409e52023b9a43823ee0dd3e006b487033"
+          }
+        },
+        {
+          "client_id": "671779952898-dl5o2s1lnnu36ghfvp0mjfgk1i4t5gm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0FwDy1LDtgT1Ha63XDZ1qGJqDQF1yi58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671779952898-dl5o2s1lnnu36ghfvp0mjfgk1i4t5gm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
