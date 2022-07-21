@@ -10,10 +10,6 @@ class IntroductionScreenView extends GetView<IntroductionScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('IntroductionScreenView'),
-        centerTitle: true,
-      ),
       body: Center(
         child: IntroductionScreen(
           pages: [
