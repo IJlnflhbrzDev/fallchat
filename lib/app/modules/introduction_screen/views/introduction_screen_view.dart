@@ -60,9 +60,6 @@ class IntroductionScreenView extends GetView<IntroductionScreenController> {
           onDone: () {
             // When done button is press
           },
-          onSkip: () {
-            // You can also override onSkip callback
-          },
           showBackButton: false,
           showSkipButton: true,
           skip: const Icon(Icons.skip_next),
