@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:fallchat/app/modules/Login/bindings/login_binding.dart';
+import 'package:fallchat/app/modules/Login/views/login_view.dart';
 import 'package:fallchat/app/modules/home/bindings/home_binding.dart';
 import 'package:fallchat/app/modules/home/views/home_view.dart';
 import 'package:fallchat/app/modules/introduction_screen/bindings/introduction_screen_binding.dart';
@@ -20,6 +22,11 @@ class AppPages {
       name: _Paths.INTRODUCTION_SCREEN,
       page: () => IntroductionScreenView(),
       binding: IntroductionScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }

@@ -1,3 +1,4 @@
+import 'package:fallchat/app/controllers/auth_controller.dart';
 import 'package:fallchat/app/utils/error_screen.dart';
 import 'package:fallchat/app/utils/loading_screen.dart';
 import 'package:fallchat/app/utils/splash_screen.dart';
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   MyApp({Key? key}) : super(key: key);
 
+  // put dependencies
+  final authC = Get.put(AuthController(), permanent: true);
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -36,7 +39,10 @@ class MyApp extends StatelessWidget {
               if (snapshot.connectionState == ConnectionState.done) {
                 return GetMaterialApp(
                   title: "Application",
-                  initialRoute: Routes.HOME,
+                  // Noted : add kondisi ketika mau di skip introduction screen nya
+                  initialRoute: authC.isSkipIntroDuctionScreen.isTrue
+                      ? Routes.LOGIN
+                      : Routes.HOME,
                   getPages: AppPages.routes,
                 );
               }
