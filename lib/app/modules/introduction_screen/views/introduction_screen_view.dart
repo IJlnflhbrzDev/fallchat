@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:lottie/lottie.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/introduction_screen_controller.dart';
 
 class IntroductionScreenView extends GetView<IntroductionScreenController> {
@@ -56,6 +57,7 @@ class IntroductionScreenView extends GetView<IntroductionScreenController> {
             ],
             onDone: () {
               // When done button is press
+              Get.offAll(Routes.LOGIN);
             },
             showBackButton: false,
             showSkipButton: true,
