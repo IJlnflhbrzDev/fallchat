@@ -51,13 +51,13 @@ class IntroductionScreenView extends GetView<IntroductionScreenController> {
                 image: Container(
                   width: Get.width * .9,
                   height: Get.height * .9,
-                  child: Lottie.asset('assets/login.json'),
+                  child: Lottie.asset('assets/register.json'),
                 ),
               ),
             ],
             onDone: () {
               // When done button is press
-              Get.offAll(Routes.LOGIN);
+              Get.offAndToNamed(Routes.LOGIN);
             },
             showBackButton: false,
             showSkipButton: true,
