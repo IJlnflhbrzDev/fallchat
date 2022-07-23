@@ -10,6 +10,8 @@ import 'package:fallchat/app/modules/introduction_screen/bindings/introduction_s
 import 'package:fallchat/app/modules/introduction_screen/views/introduction_screen_view.dart';
 import 'package:fallchat/app/modules/profile/bindings/profile_binding.dart';
 import 'package:fallchat/app/modules/profile/views/profile_view.dart';
+import 'package:fallchat/app/modules/search/bindings/search_binding.dart';
+import 'package:fallchat/app/modules/search/views/search_view.dart';
 
 part 'app_routes.dart';
 
@@ -41,6 +43,11 @@ class AppPages {
       name: _Paths.CHAT_ROOM,
       page: () => ChatRoomView(),
       binding: ChatRoomBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCH,
+      page: () => SearchView(),
+      binding: SearchBinding(),
     ),
   ];
 }

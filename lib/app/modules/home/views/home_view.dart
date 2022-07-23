@@ -28,21 +28,13 @@ class HomeView extends GetView<HomeController> {
     ).reversed.toList();
 
     return Scaffold(
-      floatingActionButton: Container(
-        width: 60,
-        height: 60,
-        child: ElevatedButton(
-            child: Icon(Icons.chat, size: 30),
-            onPressed: () => Get.toNamed(Routes.CHAT_ROOM),
-            style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all<Color>(Color(0XFFDC493C)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(1000.0),
-                ),
-              ),
-            )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.toNamed(Routes.SEARCH),
+        backgroundColor: Color(0XFFDC493C),
+        child: Icon(
+          Icons.search,
+          size: 30,
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -62,7 +54,7 @@ class HomeView extends GetView<HomeController> {
                     InkWell(
                       onTap: () {},
                       child: Icon(Icons.account_circle,
-                          size: 35.0, color: Color(0XFFDC493C)),
+                          size: 30.0, color: Color(0XFFDC493C)),
                     ),
                   ],
                 ),
