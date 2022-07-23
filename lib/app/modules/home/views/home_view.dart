@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -32,7 +33,7 @@ class HomeView extends GetView<HomeController> {
         height: 60,
         child: ElevatedButton(
             child: Icon(Icons.chat, size: 30),
-            onPressed: () {},
+            onPressed: () => Get.toNamed(Routes.CHAT_ROOM),
             style: ButtonStyle(
               backgroundColor:
                   MaterialStateProperty.all<Color>(Color(0XFFDC493C)),
@@ -59,7 +60,11 @@ class HomeView extends GetView<HomeController> {
                           TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(
+                          Routes.PROFILE,
+                        );
+                      },
                       child: Icon(Icons.account_circle,
                           size: 35.0, color: Color(0XFFDC493C)),
                     ),
