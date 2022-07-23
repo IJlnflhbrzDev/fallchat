@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeController> {
     final List<Widget> mychats = List.generate(
       20,
       (index) => ListTile(
-        onTap: () {},
+        onTap: () => Get.toNamed(Routes.CHAT_ROOM),
         leading: CircleAvatar(
           child: Image.asset('assets/noimage.png'),
           radius: 25,
@@ -60,11 +60,7 @@ class HomeView extends GetView<HomeController> {
                           TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
                     ),
                     InkWell(
-                      onTap: () {
-                        Get.toNamed(
-                          Routes.PROFILE,
-                        );
-                      },
+                      onTap: () {},
                       child: Icon(Icons.account_circle,
                           size: 35.0, color: Color(0XFFDC493C)),
                     ),
