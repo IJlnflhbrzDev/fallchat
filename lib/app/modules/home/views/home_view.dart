@@ -7,6 +7,23 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
+    final List<Widget> mychats = List.generate(
+      20,
+      (index) => ListTile(
+        leading: CircleAvatar(
+          radius: 25,
+        ),
+        title: Text('Orang Ke-$index'),
+        subtitle: Text(
+          'Status orang Ke-$index',
+          style: TextStyle(fontSize: 16),
+        ),
+        trailing: Chip(
+          label: Text('3'),
+        ),
+      ),
+    ).reversed.toList();
+
     return Scaffold(
       floatingActionButton: Container(
         width: 60,
@@ -44,22 +61,9 @@ class HomeView extends GetView<HomeController> {
             ),
             Expanded(
               child: ListView.builder(
-                itemCount: 20,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      radius: 25,
-                    ),
-                    title: Text('Orang Ke-$index'),
-                    subtitle: Text(
-                      'Status orang Ke-$index',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    trailing: Chip(
-                      label: Text('3'),
-                    ),
-                  );
-                },
+                itemCount: mychats.length,
+                itemBuilder: (BuildContext context, int index) =>
+                    mychats[index],
               ),
             ),
           ],
