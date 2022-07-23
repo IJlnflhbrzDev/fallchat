@@ -34,6 +34,8 @@ class HomeView extends GetView<HomeController> {
             child: Icon(Icons.chat, size: 30),
             onPressed: () {},
             style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateProperty.all<Color>(Color(0XFFDC493C)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(1000.0),
@@ -58,7 +60,8 @@ class HomeView extends GetView<HomeController> {
                     ),
                     InkWell(
                       onTap: () {},
-                      child: Icon(Icons.person, size: 30.0),
+                      child: Icon(Icons.account_circle,
+                          size: 35.0, color: Color(0XFFDC493C)),
                     ),
                   ],
                 ),
