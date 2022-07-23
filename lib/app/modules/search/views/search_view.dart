@@ -8,10 +8,19 @@ class SearchView extends GetView<SearchController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('SearchView'),
-        centerTitle: true,
-      ),
+      appBar: PreferredSize(
+          child: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {},
+            ),
+            backgroundColor: Colors.red,
+            title: Text('SearchView'),
+            centerTitle: true,
+          ),
+
+          // Property ini untuk memberikan height tambahan kepada appbar
+          preferredSize: Size.fromHeight(200)),
       body: Center(
         child: Text(
           'SearchView is working',
