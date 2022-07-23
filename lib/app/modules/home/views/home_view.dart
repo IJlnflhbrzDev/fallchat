@@ -10,7 +10,9 @@ class HomeView extends GetView<HomeController> {
     final List<Widget> mychats = List.generate(
       20,
       (index) => ListTile(
+        onTap: () {},
         leading: CircleAvatar(
+          child: Image.asset('assets/noimage.png'),
           radius: 25,
         ),
         title: Text('Orang Ke-$index'),
@@ -54,7 +56,10 @@ class HomeView extends GetView<HomeController> {
                       style:
                           TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
                     ),
-                    Icon(Icons.person, size: 30.0),
+                    InkWell(
+                      onTap: () {},
+                      child: Icon(Icons.person, size: 30.0),
+                    ),
                   ],
                 ),
               ),
